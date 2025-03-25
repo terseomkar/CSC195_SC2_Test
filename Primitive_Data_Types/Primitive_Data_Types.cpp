@@ -13,6 +13,9 @@ int main()
     std::cout << "Enter name: ";
     std::cin >> name;
     std::cout << "Hello " << name << std::endl;
+
+    cout << "Git is now tracking this project!" << endl;
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
