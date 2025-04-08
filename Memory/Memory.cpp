@@ -1,23 +1,48 @@
-// Primitive_Data_Types.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Memory.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
 using namespace std;
 
+void set(int& i)
+{
+    i = 123;
+}
+
+//void swap(int &i1, int &i2)
+//{
+//    int temp = i1;
+//    i1 = i2;
+//    i2 = temp;
+//}
+
+void swap(int* i1, int* i2)
+{
+    int temp = *i1;
+    *i1 = *i2;
+    *i2 = temp;
+}
+
 int main()
 {
-    int age = 10;
-    cout << age << endl;
+    int i1 = 10;
+    int i2 = 20;
     
-    age = 25;
+    int& r = i1;
+    r = 40;
 
-    std::string name;
-    std::cout << "Enter name: ";
-    std::cin >> name;
-    std::cout << "Hello " << name << std::endl;
+    int* p = nullptr;
+    p = &i1;
 
-    cout << "Git is now tracking this project!" << endl;
-    return 0;
+    set(i1);
+    swap(i1, i2);
+    cout << i1 << endl;
+    cout << i2 << endl;
+    cout << &i1 << endl;
+    cout << p << endl;
+    cout << *p << endl;
+    cout << &p << endl;
+    cout << &r << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
