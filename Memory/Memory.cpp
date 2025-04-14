@@ -43,6 +43,50 @@ int main()
     cout << *p << endl;
     cout << &p << endl;
     cout << &r << endl;
+
+    const char* str = "neumont";
+
+    //int numbers[4];
+    //
+    //int i;
+    //cin >> i;
+    //cout << numbers[i] << endl;
+    //cout << numbers << endl;
+
+    ////int* nums = new int[4];
+    //int j;
+    //cin >> j;
+    //int* nums = new int[j];
+    //cout << nums[j] << endl;
+
+    //int* p1 = new int(8);
+    //cout << *p1;
+
+    //delete p1;
+    //delete p1;
+    //cout << *p1;
+
+    string veggies[] = {"carrot", "celery", "onion", "tomato?"};
+
+    cout << "--------------------------------------------" << endl;
+    int size = sizeof(veggies) / sizeof(veggies[0]);
+    cout << veggies->size() << endl;
+    cout << sizeof(veggies) << endl;
+    cout << size << endl;
+
+    for (int i = 0; i < size; i++)
+    {
+        cout << veggies[i] << endl;
+    }
+
+    for (string veggie : veggies)
+    {
+        cout << veggie << endl;
+    }
+
+
+
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
