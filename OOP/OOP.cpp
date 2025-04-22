@@ -2,18 +2,63 @@
 //
 
 #include <iostream>
+#include <vector>
 #include "Dog.h"
+#include "Bird.h"
 
 int main()
 {
-    Animal* animal = new Animal;
-    animal->Speak();
+   /* Animal* animal = new Animal;
+    animal->Speak();*/
 
     Dog* dog = new Dog;
     dog->Speak();
 
     Animal* animal1 = new Dog;
     animal1->Speak();
+
+    //Animal animal2;
+
+    //Animal* pAnimal = &animal2;
+
+    //std::cout << pAnimal->GetLifespan();
+
+    //Animal animal3(3);
+
+    //Animal* pAnimal1 = &animal3;
+
+    //std::cout << pAnimal1->GetLifespan();
+
+    //{
+
+    //    Animal* animal4 = new Animal(5);
+
+    //    std::cout << animal4->GetLifespan();
+
+    //}
+
+    Bird crow(12, 5);
+
+    crow.Speak();
+
+    std::vector<Animal*> animals;
+    animals.push_back(new Bird);
+    animals.push_back(new Bird);
+    animals.push_back(new Dog);
+
+    for (Animal* animal : animals)
+    {
+        animal->Speak();
+    }
+
+    for (Animal* animal : animals)
+    {
+        delete animal;
+    }
+
+    animals.clear();
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
